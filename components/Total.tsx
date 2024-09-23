@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useStore } from '@/lib/store';
 import prettyBytes from 'pretty-bytes';
-import { getAvailableStorage } from '@/lib/api/google';
+// import { getAvailableStorage } from '@/lib/api/google';
 
 const Total: React.FC = () => {
   const total = useStore(state => state.total);
@@ -13,8 +13,8 @@ const Total: React.FC = () => {
   useEffect(() => {
     const fetchStorage = async () => {
       try {
-        const storage = await getAvailableStorage();
-        setAvailableStorage(storage);
+        // const storage = await getAvailableStorage();
+        // setAvailableStorage(storage);
       } catch (error) {
         console.error('Failed to fetch available storage', error);
       }

@@ -12,13 +12,14 @@ import Sidebar from './Sidebar';
 import "@/lib/mock"
 import InsertButton from './Insert';
 import ActionsMenu from './ActionsMenu';
-import { authAutodesk } from '@/lib/api/autodesk';
+// import { authAutodesk } from '@/lib/api/autodesk';
 
 import { useStoreMulti } from '@/lib/store';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Suspense } from 'react';
 import ImageEditor from './ImageEditor';
+
 declare global {
   interface Window {
     fileManager: {
@@ -37,7 +38,7 @@ export default function FileManager() {
   }, [initializeFromUrl, refreshFiles]);
 
   useEffect(() => {
-    authAutodesk();
+    // authAutodesk();
 
     window.fileManager = {
       refreshFiles: refreshFiles,
