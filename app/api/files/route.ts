@@ -23,7 +23,7 @@ export async function GET(request: Request) {
     return NextResponse.json(cachedResult);
   }
 
-  await new Promise(resolve => setTimeout(resolve, 1000));
+  // await new Promise(resolve => setTimeout(resolve, 1000));
   let files;
 
   if (searchQuery) {
