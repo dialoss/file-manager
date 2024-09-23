@@ -9,12 +9,12 @@ export const metadata = {
 }
 
 export default function Home() {
-  const cookieStore = cookies();
-  const savedPassword = cookieStore.get('password')?.value || '';
+  // const cookieStore = cookies();
+  // const savedPassword = cookieStore.get('password')?.value || '';
 
-  if (savedPassword !== process.env.PASSWORD) {
-    return <Auth /> 
-  }
+  // if (savedPassword !== process.env.PASSWORD) {
+  //   return <Auth /> 
+  // }
 
   return (
     <main className="h-screen">
