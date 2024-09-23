@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Input, useDisclosure } from "@nextui-org/react";
 import { FaEllipsisV, FaCopy, FaTrash, FaDownload, FaShare, FaFolder, FaUpload } from 'react-icons/fa';
 import { useStoreMulti } from '@/lib/store';
-import upload from '@/lib/upload';
+
 import { useWindowSize } from '@/lib/hooks';
 const ActionsMenu: React.FC = () => {
   const { selectedFiles, deleteFile, addFile, currentPath, refreshFiles } = useStoreMulti(
@@ -32,7 +32,7 @@ const ActionsMenu: React.FC = () => {
     input.multiple = true;
     input.onchange = () => {
       let files = Array.from(input.files);
-      upload(files).then(() => setTimeout(refreshFiles, 1000));
+      // upload(files).then(() => setTimeout(refreshFiles, 1000));
     };
     input.click();
   }

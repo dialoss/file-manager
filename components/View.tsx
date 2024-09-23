@@ -3,7 +3,7 @@ import { useStoreMulti } from '@/lib/store';
 import GridView from './GridView';
 import TableView from './TableView';
 import { Spinner } from "@nextui-org/react";
-import upload from '@/lib/upload';
+
 
 const View: React.FC = () => {
   const { currentZoom, isLoading, refreshFiles } = useStoreMulti('currentZoom', 'isLoading', 'refreshFiles')
@@ -13,7 +13,7 @@ const View: React.FC = () => {
     event.preventDefault();
     setIsDragging(false);
     const files = Array.from(event.dataTransfer.files);
-    upload(files).then(() => setTimeout(refreshFiles, 1000))
+    // upload(files).then(() => setTimeout(refreshFiles, 1000))
   };
 
   const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {

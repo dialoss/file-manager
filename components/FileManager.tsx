@@ -13,7 +13,7 @@ import "@/lib/mock"
 import InsertButton from './Insert';
 import ActionsMenu from './ActionsMenu';
 import { authAutodesk } from '@/lib/api/autodesk';
-import upload from '@/lib/upload';
+
 import { useStoreMulti } from '@/lib/store';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -48,7 +48,7 @@ export default function FileManager() {
         input.oncancel = () => resolve([]);
         input.onchange = () => {
             let files = Array.from(input.files);
-            upload(files).then(uploaded => resolve(uploaded));
+            // upload(files).then(uploaded => resolve(uploaded));
         };
         input.click();
     })
